@@ -1,0 +1,49 @@
+<Html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Luke</title>
+        <link rel="stylesheet" href="JulEn.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+            <h1>Luke 24: God Jul</h1>
+        </header>
+
+        <main>
+            <Div class="lukeboksbilde"> 
+                
+            <Div>
+                <img id="photo" src="julefam.jpg" alt="familiebilde" class="lukeboksbilde"> 
+            </Div>
+            <br>
+            <button onclick="changePhoto()">I dag ble Jesus født</button>
+            </Div>
+
+            <script>
+                const photos = [
+                    "juleed.jpg",
+                    "juletor.jpg",
+                    "julefam.jpg",
+                    "juleing.jpg",
+                    "julemam.jpg",
+                    "julepap.jpg",
+                ]
+                let current = 0;
+
+                function changePhoto() {
+                    current = (current + 1) % photos.length;
+                    document.getElementById("photo").src = photos[current];
+                }
+            </script>
+
+        </main>
+        
+    </body>
+
+    <footer>
+        <div class="godJul"><a class="godJul" href="index.html">God Jul</a></div>
+    </footer>
+
+</Html>
